@@ -1,0 +1,149 @@
+/* Reset and Font Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffe4b5, #ffcccb); /* New gradient background */
+    overflow-y: auto; /* Allow vertical scroll if needed */
+}
+
+/* Container and Layout */
+#container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1500px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Visualization Area */
+#visualization {
+    flex-grow: 2;
+    flex-basis: 70%;
+    background-color: #fff8dc;
+    border: 1px solid #e0a96d;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.2);
+    padding: 20px;
+    max-height: 80vh; /* Limit height to keep content in view */
+    overflow: auto; /* Enable scrolling if content exceeds the height */
+}
+
+/* Side Container Styling */
+#sideContainer {
+    flex-grow: 1;
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 100vh; /* Limit height to the viewport */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Top and Bottom Container Styling */
+#topContainer, #bottomContainer {
+    background-color: #ffefdb;
+    padding: 20px;
+    border: 1px solid #ff9b85;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(255, 105, 97, 0.2);
+}
+
+/* Headings */
+#topContainer h3 {
+    color: #ff4500;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+p {
+    color: #8b4513;
+    line-height: 1.6;
+    font-size: 1em;
+    margin: 0;
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Ensure text wraps within the container */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Label Styling */
+label {
+    font-size: 0.9em;
+    color: #d2691e;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input[type="number"], input[type="radio"] {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cd853f;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #b8860b;
+    outline: none;
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Submit Button */
+button[type="button"] {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button[type="button"]:hover {
+    background-color: #ff4500;
+    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #visualization {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    #sideContainer {
+        flex-basis: 100%;
+    }
+}
